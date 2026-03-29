@@ -72,7 +72,7 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     # ADD YOUR VERCEL URL AFTER DEPLOYING FRONTEND:
-    "https://f-actor-iq-et-605.vercel.app/",
+    "https://f-actor-iq-et-605.vercel.app",
 ]
 CORS_ALLOWED_ORIGIN_REGEXES = [
     r"^https://.*\.vercel\.app$",   # covers all Vercel preview URLs
