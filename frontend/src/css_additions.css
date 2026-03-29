@@ -1,0 +1,81 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   ADDITIONS TO index.css
+   Append these rules to the bottom of the existing index.css file.
+   Do NOT replace the existing file — only append.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Behavioral banner animations ─────────────────────────────────────────── */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-fade-up  { animation: fadeUp  0.25s ease-out; }
+.animate-fade-in  { animation: fadeIn  0.2s ease-out;  }
+.animate-pulse-slow { animation: pulse 2.5s ease-in-out infinite; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1;   }
+  50%       { opacity: 0.5; }
+}
+
+/* ── XP flash (multi-line) ────────────────────────────────────────────────── */
+
+@keyframes xpPop {
+  0%   { opacity: 0; transform: scale(0.6) translateY(0);    }
+  40%  { opacity: 1; transform: scale(1.1) translateY(-10px);}
+  70%  { opacity: 1; transform: scale(1)   translateY(-20px);}
+  100% { opacity: 0; transform: scale(0.9) translateY(-35px);}
+}
+
+.xp-pop { animation: xpPop 2s ease-out forwards; }
+
+/* ── Level-up banner ──────────────────────────────────────────────────────── */
+
+@keyframes levelUp {
+  0%   { transform: scale(0.7) rotate(-3deg); opacity: 0; }
+  60%  { transform: scale(1.05) rotate(1deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg);    opacity: 1; }
+}
+
+.level-up-card { animation: levelUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+/* ── Streak badge glow ───────────────────────────────────────────────────── */
+
+@keyframes streakPulse {
+  0%, 100% { box-shadow: 0 0 0px transparent; }
+  50%       { box-shadow: 0 0 10px currentColor; }
+}
+
+/* ── Superscript toolbar buttons ─────────────────────────────────────────── */
+
+/* Handled inline with Tailwind — no additional CSS needed */
+
+/* ── Why This Question panel ─────────────────────────────────────────────── */
+
+/* Handled inline — no additional CSS needed */
+
+/* ── Behavioral banner color classes ─────────────────────────────────────── */
+
+/* These are handled inline via template literals in BehaviorBanner.
+   Adding explicit classes here as a fallback for Tailwind purging. */
+
+.behavior-rushing      { border-color: rgba(255,215,0,0.4);   background: rgba(255,215,0,0.08);   color: #FFD700; }
+.behavior-overconf     { border-color: rgba(255,107,107,0.4); background: rgba(255,107,107,0.08); color: #FF6B6B; }
+.behavior-low-conf     { border-color: rgba(0,212,255,0.4);   background: rgba(0,212,255,0.08);   color: #00D4FF; }
+.behavior-boredom      { border-color: rgba(0,255,170,0.4);   background: rgba(0,255,170,0.08);   color: #00FFAA; }
+.behavior-struggling   { border-color: rgba(139,92,246,0.4);  background: rgba(139,92,246,0.08);  color: #8B5CF6; }
+
+/* ── Mini-game suggestion card ───────────────────────────────────────────── */
+
+/* Handled inline — glass-bright + animate-fade-up */
+
+/* ── Input field (navy-700 is a custom Tailwind extension) ───────────────── */
+
+.bg-navy-700 { background-color: #1a2640; }

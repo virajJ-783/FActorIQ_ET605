@@ -1,0 +1,896 @@
+{
+  "chapter": {
+    "id": "grade8_factorisation",
+    "name": "Factorisation",
+    "grade": 8,
+    "ncert_chapter": 12,
+    "difficulty": 0.62,
+    "prerequisite_knowledge": [
+      "Arithmetic operations on integers",
+      "Algebraic expressions: variables, terms, coefficients",
+      "Distributive property: a(b+c) = ab + ac"
+    ]
+  },
+  "knowledge_components": [
+    {
+      "id": "KC-01",
+      "name": "Identify Algebraic Terms",
+      "description": "Recognise variables, constants, and coefficients in algebraic expressions",
+      "difficulty": "foundation",
+      "dependencies": [],
+      "mastery_threshold": 0.85
+    },
+    {
+      "id": "KC-02",
+      "name": "Detect Common Factors",
+      "description": "Visually identify shared numerical and variable factors across terms",
+      "difficulty": "foundation",
+      "dependencies": [
+        "KC-01"
+      ],
+      "mastery_threshold": 0.85
+    },
+    {
+      "id": "KC-03",
+      "name": "Apply Distributive Law (Reverse)",
+      "description": "Understand a(b+c) = ab+ac and reverse it: ab+ac = a(b+c)",
+      "difficulty": "foundation",
+      "dependencies": [
+        "KC-01",
+        "KC-02"
+      ],
+      "mastery_threshold": 0.85
+    },
+    {
+      "id": "KC-04",
+      "name": "Factorisation by Common Factor Method",
+      "description": "Procedural extraction of HCF from polynomial expressions",
+      "difficulty": "core",
+      "dependencies": [
+        "KC-01",
+        "KC-02",
+        "KC-03"
+      ],
+      "mastery_threshold": 0.85
+    },
+    {
+      "id": "KC-05",
+      "name": "Factorisation by Regrouping",
+      "description": "Rearrange terms to form groups that share common factors",
+      "difficulty": "core",
+      "dependencies": [
+        "KC-04"
+      ],
+      "mastery_threshold": 0.85
+    },
+    {
+      "id": "KC-06",
+      "name": "Recognise Algebraic Identities",
+      "description": "Match expressions to patterns: (a+b)², (a-b)², a²-b²",
+      "difficulty": "core",
+      "dependencies": [
+        "KC-04"
+      ],
+      "mastery_threshold": 0.85
+    },
+    {
+      "id": "KC-07",
+      "name": "Apply Identities for Factorisation",
+      "description": "Execute factorisation using standard algebraic identities",
+      "difficulty": "complex",
+      "dependencies": [
+        "KC-06"
+      ],
+      "mastery_threshold": 0.85
+    },
+    {
+      "id": "KC-08",
+      "name": "Factorise Quadratic Expressions",
+      "description": "Split the middle term for ax²+bx+c; find factor pairs",
+      "difficulty": "complex",
+      "dependencies": [
+        "KC-04",
+        "KC-07"
+      ],
+      "mastery_threshold": 0.85
+    },
+    {
+      "id": "KC-09",
+      "name": "Factorisation for Division",
+      "description": "Simplify algebraic fractions using factorisation to cancel common factors",
+      "difficulty": "advanced",
+      "dependencies": [
+        "KC-04",
+        "KC-07",
+        "KC-08"
+      ],
+      "mastery_threshold": 0.85
+    }
+  ],
+  "subtopics": [
+    {
+      "id": "grade8_factorisation_algebraic_terms",
+      "name": "Factors of Algebraic Expressions",
+      "kcs": [
+        "KC-01",
+        "KC-02",
+        "KC-03"
+      ],
+      "difficulty": 0.3,
+      "concepts": [
+        {
+          "id": "C-01-01",
+          "kc": "KC-01",
+          "title": "What is a Factor?",
+          "explanation": "Just like 30 = 2 × 3 × 5, every algebraic expression can be written as a product of simpler pieces. These pieces are called FACTORS. In 5xy, the factors are 5, x, and y — you cannot break them down any further. These are called IRREDUCIBLE factors.",
+          "worked_example": {
+            "problem": "Write 6x²y in irreducible factor form",
+            "steps": [
+              "6x²y = 6 × x² × y",
+              "Now break 6 = 2 × 3 and x² = x × x",
+              "So 6x²y = 2 × 3 × x × x × y",
+              "Each of 2, 3, x, x, y is irreducible ✓"
+            ]
+          },
+          "indian_context_example": {
+            "scenario": "A mithai shop sells barfi in boxes. One box has 12 pieces of barfi. We can write 12 = 2 × 2 × 3. Similarly, if the total sweet pieces = 12ab, then 12ab = 2 × 2 × 3 × a × b.",
+            "expression": "12ab",
+            "factors": "2 × 2 × 3 × a × b"
+          },
+          "story_example": {
+            "story": "Priya is arranging chairs for her school's Independence Day function. She has 15xy chairs to arrange. Her teacher says: 'Write this as a product of irreducible factors.' Priya thinks: 15 = 3 × 5, so 15xy = 3 × 5 × x × y. Done!",
+            "expression": "15xy",
+            "answer": "3 × 5 × x × y"
+          },
+          "misconceptions": [
+            "Writing 5(xy) as irreducible — xy can still be split into x and y",
+            "Thinking 1 is an irreducible factor that must be shown — it is a factor of every term but not shown unless specifically required"
+          ]
+        },
+        {
+          "id": "C-02-01",
+          "kc": "KC-02",
+          "title": "Finding Common Factors",
+          "explanation": "To find what's COMMON between terms, write each term in irreducible form and look for shared factors. The HCF (Highest Common Factor) of all terms is what you will take out.",
+          "worked_example": {
+            "problem": "Find the common factors of 12a²b and 15ab²",
+            "steps": [
+              "12a²b = 2 × 2 × 3 × a × a × b",
+              "15ab² = 3 × 5 × a × b × b",
+              "Common factors: 3, a, b",
+              "HCF = 3ab"
+            ]
+          },
+          "indian_context_example": {
+            "scenario": "Raju has 18 rotis and Sita has 24 rotis. They want to arrange them in equal groups. HCF(18,24) = 6. Similarly for algebraic terms: HCF of 18x²y and 24xy² = 6xy.",
+            "expression": "18x²y and 24xy²",
+            "hcf": "6xy"
+          },
+          "story_example": {
+            "story": "Arjun and Kavya are collecting stamps for their school project. Arjun has 14pq stamps and Kavya has 21pqr stamps. They want to divide into equal bundles. The HCF is 7pq — so each bundle has 7pq stamps.",
+            "answer": "HCF(14pq, 21pqr) = 7pq"
+          },
+          "misconceptions": [
+            "Taking only the numerical HCF and missing variable factors: HCF(12a²b, 15ab²) ≠ 3; it is 3ab",
+            "Including extra variable powers: HCF should use MINIMUM powers, not maximum"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grade8_factorisation_common_factor",
+      "name": "Common Factor Method",
+      "kcs": [
+        "KC-04"
+      ],
+      "difficulty": 0.45,
+      "concepts": [
+        {
+          "id": "C-04-01",
+          "kc": "KC-04",
+          "title": "Factorising Using the Common Factor Method",
+          "explanation": "Step 1: Write each term in irreducible factor form. Step 2: Find HCF of all terms. Step 3: Write expression = HCF × (remaining bracket). This is the reverse of the distributive law!",
+          "worked_example": {
+            "problem": "Factorise 5xy + 10x",
+            "steps": [
+              "5xy = 5 × x × y",
+              "10x = 2 × 5 × x",
+              "HCF = 5x",
+              "5xy + 10x = 5x(y) + 5x(2) = 5x(y + 2)"
+            ],
+            "answer": "5x(y + 2)"
+          },
+          "indian_context_example": {
+            "scenario": "A cricket ground has 20lm² + 30lm seats. The ground manager wants to factor this to find how many rows (l) × columns (m) he needs. Factorising: 10lm(2m + 3).",
+            "expression": "20lm² + 30lm",
+            "answer": "10lm(2m + 3)"
+          },
+          "story_example": {
+            "story": "Meena is tiling her verandah. She needs 12a²b tiles for one section and 15ab² tiles for another. She wants to buy tiles in identical packets. The HCF is 3ab, so she writes: 12a²b + 15ab² = 3ab(4a + 5b). Each packet has 3ab tiles!",
+            "expression": "12a²b + 15ab²",
+            "answer": "3ab(4a + 5b)"
+          },
+          "misconceptions": [
+            "Not dividing EVERY term: writing 4(x+8) instead of 4(x+2) for 4x+8 — BUG_02",
+            "Leaving common factor inside the bracket too",
+            "Stopping at partial factorisation: 2x(x+1) + 4(x+1) should give (x+1)(2x+4) → (x+1)·2(x+2)"
+          ],
+          "remedial_explanation": "Think of it like distributing sweets! If you have 4x + 8 sweets to divide equally, you take out 4 from EVERY group: 4(x) + 4(2) = 4(x+2). The 8 becomes 2 because 8÷4=2."
+        }
+      ]
+    },
+    {
+      "id": "grade8_factorisation_regrouping",
+      "name": "Factorisation by Regrouping",
+      "kcs": [
+        "KC-05"
+      ],
+      "difficulty": 0.55,
+      "concepts": [
+        {
+          "id": "C-05-01",
+          "kc": "KC-05",
+          "title": "Regrouping: When There's No Single Common Factor",
+          "explanation": "Sometimes no single factor is common to ALL terms. But we can REGROUP terms cleverly so that within each group, there is a common factor — and then a common factor appears across the groups!",
+          "worked_example": {
+            "problem": "Factorise 2xy + 2y + 3x + 3",
+            "steps": [
+              "No single factor is common to all 4 terms",
+              "Group: (2xy + 2y) + (3x + 3)",
+              "Factor each group: 2y(x+1) + 3(x+1)",
+              "Now (x+1) is common across groups!",
+              "= (x+1)(2y+3)"
+            ],
+            "answer": "(x+1)(2y+3)"
+          },
+          "indian_context_example": {
+            "scenario": "A vegetable vendor has: 6 kg tomatoes × price_per_kg + 6 kg onions × price_per_kg − 4 tomatoes − 4 onions. This is 6p×t + 6p×o − 4t − 4o = 6p(t+o) − 4(t+o) = (t+o)(6p−4) = 2(t+o)(3p−2). Regrouping saves the day!",
+            "expression": "6xy + 6xz − 4y − 4z",
+            "answer": "2(y+z)(3x−2)"
+          },
+          "story_example": {
+            "story": "Rohit is packing gift boxes for Diwali. He has ax + bx + ay + by items. He groups: (ax + bx) + (ay + by) = x(a+b) + y(a+b) = (a+b)(x+y). The Diwali boxes come out perfectly sorted!",
+            "expression": "ax + bx + ay + by",
+            "answer": "(a+b)(x+y)"
+          },
+          "misconceptions": [
+            "Regrouping terms that have no common factor — BUG_04",
+            "Not trying an alternative grouping when the first doesn't work",
+            "Forgetting that the factor in brackets must be IDENTICAL across groups to combine them"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grade8_factorisation_identities",
+      "name": "Using Algebraic Identities",
+      "kcs": [
+        "KC-06",
+        "KC-07"
+      ],
+      "difficulty": 0.65,
+      "concepts": [
+        {
+          "id": "C-06-01",
+          "kc": "KC-06",
+          "title": "The Three Factorisation Identities",
+          "explanation": "Identity I:  a² + 2ab + b² = (a+b)²\nIdentity II: a² − 2ab + b² = (a−b)²\nIdentity III: a² − b² = (a+b)(a−b)\n\nTrick: Look at the expression. Count terms, check if first/last are perfect squares, and match the pattern!",
+          "worked_example": {
+            "problem": "Factorise x² + 8x + 16",
+            "steps": [
+              "Three terms → might be Identity I or II",
+              "x² = (x)², 16 = (4)² — both perfect squares ✓",
+              "Middle term: 2×x×4 = 8x ✓ (positive → Identity I)",
+              "So x² + 8x + 16 = (x+4)²"
+            ],
+            "answer": "(x+4)²"
+          },
+          "indian_context_example": {
+            "scenario": "A square plot of land has area 49m² + 42m + 9. A land surveyor recognises this is a perfect square: 49 = (7m)², 9 = 3², middle = 2×7m×3 = 42m. So area = (7m+3)² sq. units — a perfect square plot!",
+            "expression": "49m² + 42m + 9",
+            "answer": "(7m+3)²"
+          },
+          "story_example": {
+            "story": "Anika is designing a square rangoli for Navratri. Its area formula is 4p² − 36. She recognises: 4p² = (2p)², 36 = 6², and this is a difference of squares! So area = (2p+6)(2p−6) = 2(p+3)×2(p−3) = 4(p+3)(p−3). Beautiful!",
+            "expression": "4p² − 36",
+            "answer": "4(p+3)(p−3)"
+          },
+          "misconceptions": [
+            "(a+b)² = a²+b² — FORGETTING the 2ab middle term — BUG_01",
+            "Confusing (a−b)² with a²−b² — they are completely different identities",
+            "Not checking if the middle term has the right sign before choosing Identity I vs II"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grade8_factorisation_quadratic",
+      "name": "Quadratic Factorisation",
+      "kcs": [
+        "KC-08"
+      ],
+      "difficulty": 0.72,
+      "concepts": [
+        {
+          "id": "C-08-01",
+          "kc": "KC-08",
+          "title": "Splitting the Middle Term",
+          "explanation": "For x² + px + q, find two numbers a and b such that:\n  a × b = q  (their product = constant term)\n  a + b = p  (their sum = coefficient of x)\nThen: x² + px + q = x² + ax + bx + q = x(x+a) + b(x+a) = (x+a)(x+b)",
+          "worked_example": {
+            "problem": "Factorise x² + 5x + 6",
+            "steps": [
+              "Need: a×b = 6 and a+b = 5",
+              "Try pairs: (1,6)→sum=7 ✗; (2,3)→sum=5 ✓",
+              "x² + 5x + 6 = x² + 2x + 3x + 6",
+              "= x(x+2) + 3(x+2)",
+              "= (x+2)(x+3)"
+            ],
+            "answer": "(x+2)(x+3)"
+          },
+          "indian_context_example": {
+            "scenario": "A rectangular field near a village pond has area = y² − 7y + 12 sq.m. To find the dimensions: need a×b=12 and a+b=−7. Since sum is negative and product is positive, both are negative: a=−3, b=−4. So dimensions are (y−3) × (y−4) metres.",
+            "expression": "y² − 7y + 12",
+            "answer": "(y−3)(y−4)"
+          },
+          "story_example": {
+            "story": "Vikram is building a rectangular stage for his college fest. The stage area is z² − 4z − 12 sq. ft. He needs the dimensions. Product = −12 (negative → one factor negative). Sum = −4. He tries: (−6, 2) → product=−12, sum=−4 ✓. Stage dimensions: (z−6) × (z+2) ft!",
+            "expression": "z² − 4z − 12",
+            "answer": "(z−6)(z+2)"
+          },
+          "misconceptions": [
+            "Choosing factor pairs by product alone, ignoring the sum condition — BUG_05",
+            "Getting the sign wrong when both numbers should be negative — BUG_03",
+            "Not first taking out a common numerical factor when leading coefficient > 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grade8_factorisation_division",
+      "name": "Division of Algebraic Expressions",
+      "kcs": [
+        "KC-09"
+      ],
+      "difficulty": 0.75,
+      "concepts": [
+        {
+          "id": "C-09-01",
+          "kc": "KC-09",
+          "title": "Division Using Factorisation",
+          "explanation": "To divide a polynomial by another, FACTORISE the numerator completely, then cancel the common factor with the denominator. Division is the reverse of multiplication.",
+          "worked_example": {
+            "problem": "Divide (7x² + 14x) ÷ (x + 2)",
+            "steps": [
+              "Factorise numerator: 7x² + 14x = 7x(x+2)",
+              "Write as fraction: 7x(x+2) / (x+2)",
+              "Cancel (x+2): = 7x"
+            ],
+            "answer": "7x"
+          },
+          "indian_context_example": {
+            "scenario": "A school tuck-shop sold (5p²+20p) rupees worth of samosas in (p+4) days. Average daily sale = (5p²+20p)÷(p+4) = 5p(p+4)÷(p+4) = 5p rupees per day.",
+            "expression": "(5p² + 20p) ÷ (p + 4)",
+            "answer": "5p"
+          },
+          "story_example": {
+            "story": "The school garden is z(5z²−80) sq. cm and has 5z(z+4) flower beds. Each bed has z(5z²−80) / 5z(z+4) sq. cm. Factorising: z×5(z²−16) / 5z(z+4) = 5z(z+4)(z−4) / 5z(z+4) = (z−4) sq. cm. Neat!",
+            "expression": "z(5z² − 80) ÷ 5z(z + 4)",
+            "answer": "(z − 4)"
+          },
+          "misconceptions": [
+            "Trying to divide each term of numerator by the polynomial denominator separately — doesn't work!",
+            "Forgetting to factorise first before cancelling",
+            "Leaving unfactored difference-of-squares in the numerator — BUG_06"
+          ]
+        }
+      ]
+    }
+  ],
+  "question_bank": [
+    {
+      "id": "Q-KC01-001",
+      "kc": "KC-01",
+      "difficulty": 1,
+      "type": "mcq",
+      "question": "Which of the following lists the irreducible factors of 6xy?",
+      "options": [
+        "6 and xy",
+        "6x and y",
+        "2, 3, x, y",
+        "2xy and 3"
+      ],
+      "correct_answer": "2, 3, x, y",
+      "correct_index": 2,
+      "hints": [
+        "Hint 1 (Nudge): First, break 6 into its prime factors.",
+        "Hint 2 (Partial): 6 = 2 × 3. Now x and y are already irreducible variables.",
+        "Hint 3 (Full): 6xy = 2 × 3 × x × y. None of these can be broken down further."
+      ],
+      "t_min": 10,
+      "t_max": 45,
+      "question_meta": {
+        "identity": null,
+        "expects_difference_of_squares": false
+      }
+    },
+    {
+      "id": "Q-KC01-002",
+      "kc": "KC-01",
+      "difficulty": 1,
+      "type": "fill",
+      "question": "Write 10a²b in its irreducible factor form.",
+      "correct_answer": "2 × 5 × a × a × b",
+      "hints": [
+        "Hint 1: Start by factoring the number 10.",
+        "Hint 2: 10 = 2 × 5. Now deal with a² = a × a.",
+        "Hint 3: 10a²b = 2 × 5 × a × a × b"
+      ],
+      "t_min": 15,
+      "t_max": 60,
+      "question_meta": {}
+    },
+    {
+      "id": "Q-KC02-001",
+      "kc": "KC-02",
+      "difficulty": 1,
+      "type": "mcq",
+      "question": "Find the HCF (common factor) of 14pq and 28p²q².",
+      "options": [
+        "7p",
+        "14pq",
+        "28p²q²",
+        "7pq"
+      ],
+      "correct_answer": "14pq",
+      "correct_index": 1,
+      "hints": [
+        "Hint 1: Write both in factor form: 14pq = 2×7×p×q and 28p²q² = 2×2×7×p×p×q×q",
+        "Hint 2: Common factors are 2, 7, p, q — so HCF = 2×7×p×q",
+        "Hint 3: HCF = 14pq"
+      ],
+      "t_min": 20,
+      "t_max": 75,
+      "question_meta": {}
+    },
+    {
+      "id": "Q-KC02-002",
+      "kc": "KC-02",
+      "difficulty": 2,
+      "type": "fill",
+      "question": "Find the common factors of 6abc, 24ab², and 12a²b.",
+      "correct_answer": "6ab",
+      "hints": [
+        "Hint 1: Write each in factor form and look for what appears in all three.",
+        "Hint 2: Numerical HCF of 6, 24, 12 = 6. Now check variables.",
+        "Hint 3: a appears in all (minimum power 1), b appears in all (minimum power 1), c appears only in the first. HCF = 6ab"
+      ],
+      "t_min": 25,
+      "t_max": 90,
+      "question_meta": {}
+    },
+    {
+      "id": "Q-KC03-001",
+      "kc": "KC-03",
+      "difficulty": 1,
+      "type": "mcq",
+      "question": "Which expression equals 3(x + 4) when expanded using the distributive law?",
+      "options": [
+        "3x + 4",
+        "3x + 12",
+        "x + 12",
+        "3x + 7"
+      ],
+      "correct_answer": "3x + 12",
+      "correct_index": 1,
+      "hints": [
+        "Hint 1: The distributive law says a(b+c) = ab + ac. Apply it with a=3, b=x, c=4.",
+        "Hint 2: 3×x = 3x, and 3×4 = 12.",
+        "Hint 3: 3(x+4) = 3x + 12."
+      ],
+      "t_min": 15,
+      "t_max": 60,
+      "question_meta": {}
+    },
+    {
+      "id": "Q-KC03-002",
+      "kc": "KC-03",
+      "difficulty": 1,
+      "type": "fill",
+      "question": "Use the distributive law IN REVERSE: 5x + 20 = 5(___)",
+      "correct_answer": "x+4",
+      "hints": [
+        "Hint 1: The distributive law in reverse means TAKING OUT a common factor. What is common to 5x and 20?",
+        "Hint 2: Both 5x and 20 are divisible by 5. So 5x = 5×x and 20 = 5×4.",
+        "Hint 3: 5x + 20 = 5(x + 4). The blank is x+4."
+      ],
+      "t_min": 15,
+      "t_max": 60,
+      "question_meta": {}
+    },
+    {
+      "id": "Q-KC03-003",
+      "kc": "KC-03",
+      "difficulty": 2,
+      "type": "fill",
+      "question": "Fill in the blank: 6a + 6b = 6(___). This uses the distributive law in reverse.",
+      "correct_answer": "a+b",
+      "hints": [
+        "Hint 1: What is common to 6a and 6b?",
+        "Hint 2: The number 6 is common. Factor it out.",
+        "Hint 3: 6a + 6b = 6×a + 6×b = 6(a + b)"
+      ],
+      "t_min": 20,
+      "t_max": 70,
+      "question_meta": {}
+    },
+    {
+      "id": "Q-KC04-001",
+      "kc": "KC-04",
+      "difficulty": 1,
+      "type": "fill",
+      "question": "Factorise: 2x + 4",
+      "correct_answer": "2(x+2)",
+      "hints": [
+        "Hint 1: What number is common to both 2x and 4?",
+        "Hint 2: HCF of 2x and 4 is 2. Take 2 outside: 2(? + ?)",
+        "Hint 3: 2x ÷ 2 = x, 4 ÷ 2 = 2. So answer is 2(x+2)"
+      ],
+      "t_min": 15,
+      "t_max": 60,
+      "trap_bug": "BUG_02",
+      "question_meta": {
+        "expected_common_factor": 2,
+        "constant_term": 4
+      }
+    },
+    {
+      "id": "Q-KC04-002",
+      "kc": "KC-04",
+      "difficulty": 1,
+      "type": "fill",
+      "question": "Factorise: 7a² + 14a",
+      "correct_answer": "7a(a+2)",
+      "hints": [
+        "Hint 1: Look for common numerical AND variable factors in 7a² and 14a.",
+        "Hint 2: Numerical HCF = 7. Variable HCF = a (lowest power of a).",
+        "Hint 3: HCF = 7a. So: 7a(a + 2)"
+      ],
+      "t_min": 20,
+      "t_max": 75,
+      "question_meta": {
+        "expected_common_factor": "7a"
+      }
+    },
+    {
+      "id": "Q-KC04-003",
+      "kc": "KC-04",
+      "difficulty": 2,
+      "type": "fill",
+      "question": "Factorise: 12a²b + 15ab²",
+      "correct_answer": "3ab(4a+5b)",
+      "hints": [
+        "Hint 1: Find HCF of 12a²b and 15ab².",
+        "Hint 2: Numerical HCF(12,15) = 3; variable HCF = a¹b¹ = ab. So HCF = 3ab.",
+        "Hint 3: 12a²b ÷ 3ab = 4a, 15ab² ÷ 3ab = 5b. Answer: 3ab(4a+5b)"
+      ],
+      "t_min": 30,
+      "t_max": 90,
+      "trap_bug": "BUG_08",
+      "question_meta": {}
+    },
+    {
+      "id": "Q-KC04-004",
+      "kc": "KC-04",
+      "difficulty": 2,
+      "type": "fill",
+      "question": "Factorise: 5x²y − 15xy²",
+      "correct_answer": "5xy(x−3y)",
+      "hints": [
+        "Hint 1: Both terms have x, y, and a common number.",
+        "Hint 2: HCF = 5xy. Divide each term by 5xy.",
+        "Hint 3: 5xy(x − 3y)"
+      ],
+      "t_min": 25,
+      "t_max": 80,
+      "question_meta": {}
+    },
+    {
+      "id": "Q-KC04-005",
+      "kc": "KC-04",
+      "difficulty": 3,
+      "type": "fill",
+      "question": "Factorise: 10x² − 18x³ + 14x⁴",
+      "correct_answer": "2x²(5 − 9x + 7x²)",
+      "hints": [
+        "Hint 1: All terms have x². Take x² out. Also find the numerical HCF of 10, 18, 14.",
+        "Hint 2: HCF(10,18,14) = 2. Variable HCF = x². So take out 2x².",
+        "Hint 3: 10x² ÷ 2x² = 5, −18x³ ÷ 2x² = −9x, 14x⁴ ÷ 2x² = 7x². Answer: 2x²(5 − 9x + 7x²)"
+      ],
+      "t_min": 45,
+      "t_max": 120,
+      "question_meta": {}
+    },
+    {
+      "id": "Q-KC05-001",
+      "kc": "KC-05",
+      "difficulty": 2,
+      "type": "fill",
+      "question": "Factorise by regrouping: 2xy + 2y + 3x + 3",
+      "correct_answer": "(x+1)(2y+3)",
+      "hints": [
+        "Hint 1: No single factor is common to all 4 terms. Try grouping first two and last two.",
+        "Hint 2: Group (2xy + 2y) + (3x + 3). Factor each: 2y(x+1) + 3(x+1).",
+        "Hint 3: (x+1) is now common! = (x+1)(2y+3)"
+      ],
+      "t_min": 45,
+      "t_max": 120,
+      "question_meta": {}
+    },
+    {
+      "id": "Q-KC05-002",
+      "kc": "KC-05",
+      "difficulty": 2,
+      "type": "fill",
+      "question": "Factorise: 6xy − 4y + 6 − 9x",
+      "correct_answer": "(3x−2)(2y−3)",
+      "hints": [
+        "Hint 1: Try grouping (6xy − 4y) and (6 − 9x). Find a common factor in each group.",
+        "Hint 2: 6xy − 4y = 2y(3x−2). For 6 − 9x, rearrange to −9x+6 = −3(3x−2).",
+        "Hint 3: 2y(3x−2) − 3(3x−2) = (3x−2)(2y−3)"
+      ],
+      "t_min": 60,
+      "t_max": 150,
+      "question_meta": {}
+    },
+    {
+      "id": "Q-KC05-003",
+      "kc": "KC-05",
+      "difficulty": 3,
+      "type": "fill",
+      "question": "Factorise: ax + bx − ay − by",
+      "correct_answer": "(a+b)(x−y)",
+      "hints": [
+        "Hint 1: Group as (ax+bx) + (−ay−by). Factor each group.",
+        "Hint 2: x(a+b) − y(a+b)",
+        "Hint 3: (a+b)(x−y)"
+      ],
+      "t_min": 60,
+      "t_max": 150,
+      "question_meta": {}
+    },
+    {
+      "id": "Q-KC06-001",
+      "kc": "KC-06",
+      "difficulty": 1,
+      "type": "mcq",
+      "question": "Which identity should be used to factorise x² + 8x + 16?",
+      "options": [
+        "a² − b² = (a+b)(a−b)",
+        "(a+b)² = a² + 2ab + b²",
+        "(a−b)² = a² − 2ab + b²",
+        "Cannot be factorised"
+      ],
+      "correct_answer": "(a+b)² = a² + 2ab + b²",
+      "correct_index": 1,
+      "hints": [
+        "Hint 1: Count the terms (3) and check if first and last are perfect squares.",
+        "Hint 2: x² = (x)², 16 = (4)². Check the middle: 2×x×4 = 8x ✓",
+        "Hint 3: This matches Identity I: (a+b)² with a=x, b=4."
+      ],
+      "t_min": 20,
+      "t_max": 75,
+      "question_meta": {
+        "identity": "square_sum"
+      }
+    },
+    {
+      "id": "Q-KC07-001",
+      "kc": "KC-07",
+      "difficulty": 2,
+      "type": "fill",
+      "question": "Factorise: 4y² − 12y + 9",
+      "correct_answer": "(2y−3)²",
+      "hints": [
+        "Hint 1: Check: is 4y² a perfect square? Is 9 a perfect square?",
+        "Hint 2: 4y² = (2y)², 9 = (3)². Middle term = 2×2y×3 = 12y with negative sign → Identity II.",
+        "Hint 3: (2y)² − 2(2y)(3) + (3)² = (2y−3)²"
+      ],
+      "t_min": 30,
+      "t_max": 90,
+      "question_meta": {
+        "identity": "square_diff",
+        "a_val": "2y",
+        "b_val": 3
+      }
+    },
+    {
+      "id": "Q-KC07-002",
+      "kc": "KC-07",
+      "difficulty": 2,
+      "type": "fill",
+      "question": "Factorise: 49p² − 36",
+      "correct_answer": "(7p−6)(7p+6)",
+      "hints": [
+        "Hint 1: Two terms, one subtracted — think difference of squares.",
+        "Hint 2: 49p² = (7p)², 36 = (6)². This is a²−b².",
+        "Hint 3: (7p)²−6² = (7p−6)(7p+6)"
+      ],
+      "t_min": 25,
+      "t_max": 80,
+      "question_meta": {
+        "expects_difference_of_squares": true
+      }
+    },
+    {
+      "id": "Q-KC07-003",
+      "kc": "KC-07",
+      "difficulty": 3,
+      "type": "fill",
+      "question": "Factorise: m⁴ − 256",
+      "correct_answer": "(m−4)(m+4)(m²+16)",
+      "hints": [
+        "Hint 1: m⁴ = (m²)² and 256 = 16². Apply difference of squares.",
+        "Hint 2: (m²−16)(m²+16). Now (m²+16) cannot be factored. But can (m²−16) be further factored?",
+        "Hint 3: m²−16 = (m−4)(m+4). Full answer: (m−4)(m+4)(m²+16)"
+      ],
+      "t_min": 60,
+      "t_max": 180,
+      "trap_bug": "BUG_06",
+      "question_meta": {
+        "expects_difference_of_squares": true
+      }
+    },
+    {
+      "id": "Q-KC08-001",
+      "kc": "KC-08",
+      "difficulty": 2,
+      "type": "fill",
+      "question": "Factorise: x² + 5x + 6",
+      "correct_answer": "(x+2)(x+3)",
+      "hints": [
+        "Hint 1: Find two numbers whose product is 6 and whose sum is 5.",
+        "Hint 2: Pairs of 6: (1,6)→sum 7, (2,3)→sum 5 ✓. Use 2 and 3.",
+        "Hint 3: x²+5x+6 = x²+2x+3x+6 = x(x+2)+3(x+2) = (x+2)(x+3)"
+      ],
+      "t_min": 40,
+      "t_max": 120,
+      "trap_bug": "BUG_05",
+      "question_meta": {
+        "correct_factors": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "Q-KC08-002",
+      "kc": "KC-08",
+      "difficulty": 2,
+      "type": "fill",
+      "question": "Factorise: y² − 7y + 12",
+      "correct_answer": "(y−3)(y−4)",
+      "hints": [
+        "Hint 1: Product = 12, sum = −7 (negative!). Both numbers must be negative.",
+        "Hint 2: Try −3 and −4: product = (−3)(−4) = +12, sum = −7 ✓",
+        "Hint 3: y²−7y+12 = (y−3)(y−4)"
+      ],
+      "t_min": 40,
+      "t_max": 120,
+      "trap_bug": "BUG_03",
+      "question_meta": {
+        "correct_factors": [
+          -3,
+          -4
+        ]
+      }
+    },
+    {
+      "id": "Q-KC08-003",
+      "kc": "KC-08",
+      "difficulty": 2,
+      "type": "fill",
+      "question": "Factorise: z² − 4z − 12",
+      "correct_answer": "(z−6)(z+2)",
+      "hints": [
+        "Hint 1: Product = −12 (negative → one factor positive, one negative). Sum = −4.",
+        "Hint 2: The negative one has larger absolute value. Try −6 and +2: product=−12 ✓ sum=−4 ✓",
+        "Hint 3: (z−6)(z+2)"
+      ],
+      "t_min": 45,
+      "t_max": 130,
+      "trap_bug": "BUG_03",
+      "question_meta": {
+        "correct_factors": [
+          -6,
+          2
+        ]
+      }
+    },
+    {
+      "id": "Q-KC08-004",
+      "kc": "KC-08",
+      "difficulty": 3,
+      "type": "fill",
+      "question": "Factorise: 3m² + 9m + 6",
+      "correct_answer": "3(m+1)(m+2)",
+      "hints": [
+        "Hint 1: First, check for a common numerical factor across all terms.",
+        "Hint 2: All terms divisible by 3. Take out 3: 3(m²+3m+2).",
+        "Hint 3: Now factorise m²+3m+2: product=2, sum=3 → (m+1)(m+2). Final: 3(m+1)(m+2)"
+      ],
+      "t_min": 60,
+      "t_max": 150,
+      "question_meta": {}
+    },
+    {
+      "id": "Q-KC09-001",
+      "kc": "KC-09",
+      "difficulty": 2,
+      "type": "fill",
+      "question": "Divide: (7x² + 14x) ÷ (x + 2)",
+      "correct_answer": "7x",
+      "hints": [
+        "Hint 1: Factorise the numerator 7x²+14x first.",
+        "Hint 2: 7x²+14x = 7x(x+2). Now divide by (x+2).",
+        "Hint 3: 7x(x+2) ÷ (x+2) = 7x"
+      ],
+      "t_min": 30,
+      "t_max": 90,
+      "question_meta": {}
+    },
+    {
+      "id": "Q-KC09-002",
+      "kc": "KC-09",
+      "difficulty": 3,
+      "type": "fill",
+      "question": "Divide: z(5z² − 80) ÷ 5z(z + 4)",
+      "correct_answer": "(z−4)",
+      "hints": [
+        "Hint 1: Factorise the numerator. Factor out z and 5 from 5z²−80.",
+        "Hint 2: 5z²−80 = 5(z²−16) = 5(z+4)(z−4). So numerator = z×5(z+4)(z−4).",
+        "Hint 3: Divide by 5z(z+4): cancel 5, z, and (z+4). Answer: (z−4)"
+      ],
+      "t_min": 60,
+      "t_max": 180,
+      "trap_bug": "BUG_06",
+      "question_meta": {
+        "expects_difference_of_squares": true
+      }
+    },
+    {
+      "id": "Q-KC09-003",
+      "kc": "KC-09",
+      "difficulty": 3,
+      "type": "fill",
+      "question": "Divide: (y² + 7y + 10) ÷ (y + 5)",
+      "correct_answer": "(y+2)",
+      "hints": [
+        "Hint 1: Factorise the numerator y²+7y+10.",
+        "Hint 2: Product=10, sum=7 → factors 5 and 2. So y²+7y+10 = (y+5)(y+2).",
+        "Hint 3: (y+5)(y+2) ÷ (y+5) = (y+2)"
+      ],
+      "t_min": 50,
+      "t_max": 150,
+      "question_meta": {}
+    },
+    {
+      "id": "Q-KC08-CHALLENGE-001",
+      "kc": "KC-08",
+      "difficulty": 3,
+      "type": "fill",
+      "question": "CHALLENGE: Factorise a⁴ − 2a²b² + b⁴",
+      "correct_answer": "(a²−b²)² = (a−b)²(a+b)²",
+      "hints": [
+        "Hint 1: Recognise (a²)², 2(a²)(b²), (b²)² — this looks like Identity II with a²→a, b²→b!",
+        "Hint 2: a⁴−2a²b²+b⁴ = (a²−b²)²",
+        "Hint 3: (a²−b²) = (a−b)(a+b). So full answer = (a−b)²(a+b)²"
+      ],
+      "t_min": 90,
+      "t_max": 240,
+      "question_meta": {
+        "identity": "square_diff",
+        "expects_difference_of_squares": true
+      }
+    }
+  ]
+}
