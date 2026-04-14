@@ -83,7 +83,7 @@ export default function Dashboard() {
             <button onClick={() => navigate('/games')}       className="btn-ghost text-sm">🎮 Games</button>
             <button onClick={() => navigate('/leaderboard')} className="btn-ghost text-sm">🏆 Leaderboard</button>
             <button onClick={() => navigate('/analytics')}   className="btn-ghost text-sm">📊 Analytics</button>
-            <button onClick={logout} className="btn-ghost text-sm text-coral border-coral/30">Logout</button>
+            <button onClick={() => { logout(); window.location.href = 'https://kaushik-dev.online/dashboard' }} className="btn-ghost text-sm text-coral border-coral/30">Logout</button>
           </div>
         </div>
 

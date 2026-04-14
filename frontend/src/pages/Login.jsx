@@ -1,6 +1,24 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import useStore from '../store/useStore'
+
+// Safely decode a JWT payload without verifying the signature (client-side only).
+function decodeJwtPayload(token) {
+  try {
+    const base64Url = token.split('.')[1]
+    if (!base64Url) return null
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/')
+    const json = decodeURIComponent(
+      atob(base64)
+        .split('')
+        .map((c) => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
+        .join('')
+    )
+    return JSON.parse(json)
+  } catch {
+    return null
+  }
+}
 
 export default function Login() {
   const [studentId, setStudentId]   = useState('')
@@ -9,6 +27,38 @@ export default function Login() {
   const [error,     setError]       = useState('')
   const login    = useStore((s) => s.login)
   const navigate = useNavigate()
+
+  // On mount: check URL for ?token= and auto-login if found
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const token  = params.get('token')
+    if (!token) return
+
+    const payload = decodeJwtPayload(token)
+    if (!payload) return
+
+    // Derive student id: prefer student_id param, else build "S-{user_id}" from token
+    const urlStudentId  = params.get('student_id')
+    const derivedId     = urlStudentId || (payload.user_id ? `S-${payload.user_id}` : null)
+    if (!derivedId) return
+
+    // Derive display name from token claims if available
+    const derivedName = payload.name || payload.display_name || payload.username || ''
+
+    setStudentId(derivedId)
+    setUsername(derivedName)
+
+    // Auto-submit after a short tick so state settles
+    const autoLogin = async () => {
+      setLoading(true)
+      setError('')
+      const result = await login(derivedId, derivedName || derivedId)
+      setLoading(false)
+      if (result.success) navigate('/dashboard')
+      else setError('Auto-login failed. Please enter your Student ID manually.')
+    }
+    autoLogin()
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleSubmit = async (e) => {
     e.preventDefault()

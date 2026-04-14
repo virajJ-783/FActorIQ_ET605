@@ -83,6 +83,7 @@ CORS_ALLOW_CREDENTIALS = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_DIRS = [BASE_DIR / 'dist']
 
 SPECTACULAR_SETTINGS = {
     'TITLE': 'FactorIQ ITS API',
